@@ -69,8 +69,40 @@ toggleButton.addEventListener("click", () => {
 });
 */
 
-let input=document.getElementById("username")
-console.log(input.getAttribute("type"))
-console.log(input.setAttribute("type","email"))
-console.log(input.setAttribute("placeholder","Enter your email address"))
-console.log(input.hasAttribute("placeholder"))
+/*let input = document.getElementById("username");
+
+console.log(input.getAttribute("type"));
+
+input.setAttribute("type", "email");
+input.setAttribute("placeholder", "Enter your email address");
+
+console.log(input.getAttribute("type"));
+console.log(input.getAttribute("placeholder"));
+
+console.log(input.hasAttribute("placeholder"));
+
+
+
+let button=document.getElementById("btn1")
+button.addEventListener("click",(event)=>{
+     console.log(event.target.textContent);
+})
+
+
+let box = document.getElementById("box");
+
+box.addEventListener("click", (event) => {
+    console.log("Target:", event.target);
+    console.log("Current Target:", event.currentTarget);
+});
+*/
+
+let parent=document.getElementById("parent");
+let child=document.getElementById("child");
+parent.addEventListener("click",(event)=>{
+    console.log("Parent Clicked");
+})
+child.addEventListener("click",(event)=>{
+    console.log("Child Clicked");
+    event.stopPropagation(); // Prevents the click event from bubbling up to the parent
+})

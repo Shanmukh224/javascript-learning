@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Todo App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="todo-container">
+
+        <h1>Todo List</h1>
+
+        <form id="todoForm">
+
+            <input
+                id="todoInput"
+                type="text"
+                placeholder="Enter a task"
+            >
+
+            <button type="submit">Add Todo</button>
+
+        </form>
+
+        <p id="error"></p>
+
+        <ul id="todoList"></ul>
+
+    </div>
+
+    <script src="todo.js"></script>
+
+</body>
+</html>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+.todo-container {
+    width: 400px;
+    margin: 50px auto;
+}
+
+li {
+    margin: 10px 0;
+}
+
+button {
+    margin-left: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+</style>
